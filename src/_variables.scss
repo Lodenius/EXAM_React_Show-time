@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Sansita:ital,wght@1,800&display=swap');
+
+
+$primaryRed: #de1e1e;
+
+@mixin headlineFont {
+    font-family: 'Sansita', sans-serif;
+}
+
+@mixin infoFont {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+$primaryPink: #fd6185;
+$primaryBlue: #4cbbb9;
+
+@mixin reset-user-agent-margins {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+@mixin box-shadowing {
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.094);
+}

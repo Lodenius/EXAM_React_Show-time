@@ -1,0 +1,73 @@
+[{
+            "title": "The Last of Us",
+            "channel": "HBO max",
+            "seasons": 1,
+            "poster": "https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 1
+        },
+        {
+            "title": "Yellowjackets",
+            "channel": "Showtime",
+            "seasons": 2,
+            "poster": "https://m.media-amazon.com/images/M/MV5BMTkzYTBkYmItN2Q0Zi00ODhiLWI3MzEtNDdiNDRkNWYzOTMyXkEyXkFqcGdeQXVyMTUyMTgzNjY4._V1_FMjpg_UX1000_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 2
+        },
+        {
+            "title": "The Mandalorian",
+            "channel": "Disney+",
+            "seasons": 3,
+            "poster": "https://resizing.flixster.com/lr4jCoEsnAJCStM5AcaZLkuxCaA=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvUlRNVUxUSVVTRTIzOTEwMzcud2VicA==",
+            "score": "",
+            "episodes": 0,
+            "id": 3
+        },
+        {
+            "title": "The Office",
+            "channel": "Netflix",
+            "seasons": 9,
+            "poster": "https://m.media-amazon.com/images/I/81R7QZV5P1L._AC_UF894,1000_QL80_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 4
+        },
+        {
+            "title": "Friends",
+            "channel": "HBO max",
+            "seasons": 10,
+            "poster": "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_QL75_UY281_CR1,0,190,281_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 5
+        },
+        {
+            "title": "Game of Thrones",
+            "channel": "HBO",
+            "seasons": 8,
+            "poster": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 6
+        },
+        {
+            "title": "Grey's anatomy",
+            "channel": "Disney+",
+            "seasons": 19,
+            "poster": "https://m.media-amazon.com/images/M/MV5BODA2Mjk0N2MtNGY0Mi00ZWFjLTkxODEtZDFjNDg4ZDliMGVmXkEyXkFqcGdeQXVyMzAzNTY3MDM@._V1_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 7
+        },
+        {
+            "title": "The Rings of Power",
+            "channel": "Prime Video",
+            "seasons": 1,
+            "poster": "https://m.media-amazon.com/images/M/MV5BNTg3NjcxYzgtYjljNC00Y2I2LWE3YmMtOTliZTkwYTE1MmZiXkEyXkFqcGdeQXVyNTY4NDc5MDE@._V1_FMjpg_UX1000_.jpg",
+            "score": "",
+            "episodes": 0,
+            "id": 8
+        }
+    ]

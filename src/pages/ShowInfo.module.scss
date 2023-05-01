@@ -1,0 +1,40 @@
+@import "../variables";
+
+.showInfo {
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 2rem 1rem 1rem;
+        button{
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: medium;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__title {
+        @include headlineFont;
+        font-size: 35px;
+        color: $primaryRed;
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        font-weight: bold;
+    }
+    &__progress {
+        margin-top: 1.5rem;
+        height: 5rem;
+    }
+    &__progressButtons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

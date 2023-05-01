@@ -1,0 +1,35 @@
+@import "../variables";
+
+.splashContainer {
+    border: 1px solid $primaryRed;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+    color: black;
+    height: 700px;
+        &__text {
+            font-size: medium;
+            margin: .8rem;
+            align-content: center;
+            grid-row: 2;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.412);
+        }
+        h1 {
+            color: $primaryRed;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 60px;
+            @include headlineFont
+        }
+        h3 {
+            font-size: x-large;
+        }
+        &__imageSection{
+            grid-row: 4;
+            margin-left: auto;
+            padding-bottom: 2rem;
+        }
+        &__image {
+            height: 250px;
+        }
+}
