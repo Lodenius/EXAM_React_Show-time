@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 import style from './Header.module.scss';
 
 function Header(props) {
@@ -11,16 +11,21 @@ function Header(props) {
 
             <section className={style.header__links}>
                 <section className={style.header__favs}>
-                    <p>Faves</p>
+                    <NavLink to='/start'>
+                        <p>Watchlist</p>
+                    </NavLink>
                 </section>
-
-                <section className={style.header__watched}>
-                    <p>Watched</p>
-                </section>
-
                 <section className={style.header__add}>
-                    <p>Add</p>
+                    <NavLink to='/addshow'>
+                        <p>Add</p>
+                    </NavLink>
                 </section>
+                <section className={style.header__watched}>
+                    <NavLink to='/watched'>
+                        <p>Watched</p>
+                    </NavLink>
+                </section>
+
             </section>
             <section className={style.header__category}>
                 <h2>{props.title}</h2>

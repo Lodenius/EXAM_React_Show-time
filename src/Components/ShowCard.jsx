@@ -5,12 +5,13 @@ function ShowCard({show}) {
 
 
     return ( 
-        <NavLink to={"/showinfo/" + show.id}>
+        <NavLink to={"/showinfo/" + show.id + '/' + show.title}>
             <article className={style.showCard}>
                 <section className={style.showCard__poster}>
                     <img src={show.poster} height='180px' />   
                 </section>
                 <h2>{show.title}</h2>
+                {/* <p>{show.score + '/5'}</p> */}
             </article>
         </NavLink>
      );

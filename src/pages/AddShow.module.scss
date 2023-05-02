@@ -1,0 +1,22 @@
+@import "../variables";
+
+.addNewShow {
+    .roundImage {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 1px solid $primaryRed;
+        margin: 1.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        img{
+            width: 6rem;
+        }
+    }
+    .inputFields {
+        margin-bottom: 5rem;
+        margin-top: 3rem;
+    }
+}

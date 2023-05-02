@@ -12,11 +12,10 @@
     top: 0;
     border-bottom: .1px solid #2e2e2e;
     margin-bottom: .5rem;
-
     h1{
         @include headlineFont;
+        @include text-shadowing;
         font-size: 35px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.412);
     }
     &__links {
         display: flex;
@@ -27,14 +26,16 @@
         width: 4rem;
         height: 1rem;
         padding: 2px;
-        &:hover {
-            color: black;
-            cursor: pointer;
-        }
+        @include text-shadowing;
     }
     p {
         font-size: 13px;
         font-weight: bold;
+        color: white;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
     &__category {
         background-color: black;

@@ -3,15 +3,17 @@
 .showCard {
     min-height: 15rem;
     width: 10rem;
-    background-color: aliceblue;
     color: black;
     margin: .5rem;
     display: flex;
     flex-direction: column;
     border-radius: 2%;
-    border: 1px solid $primaryRed;
+
+    color: white;
+    box-shadow: 0 0 10px $primaryRed;
     &__poster {
         margin-top: 1rem;
+        border: 1px solid black;
     }
     h2 {
         font-size: 16px;
