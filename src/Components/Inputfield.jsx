@@ -7,7 +7,7 @@ function Inputfield(props) {
                 <label>{props.label}: </label>
             </section>
             <section className={style.input}>
-                <input type={props.type} value={props.value} onChange={(e) => props.action(e.target.value)} min="1" max="30"/>
+                <input type={props.type} value={props.value} onChange={props.onChange} min="1" max="30"/>
             </section>
         </main>
 

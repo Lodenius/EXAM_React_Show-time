@@ -3,22 +3,17 @@ export const watchList = (shows) => ({
     payload: shows
 });
 
-export const addShow = (shows) => ({
+export const addShow = (added) => ({
     type: "ADD_SHOW",
-    payload: shows
+    payload: { show: added}
 });
 
-export const FinishedShow = (shows) => ({
+export const finishedShow = (finished) => ({
     type: "FINISHED_SHOW",
-    payload: shows
+    payload: { watched: finished }
 });
 
-export const buyCandy = (candy) => ({
-    type: "BUY_CANDY",
-    payload: candy
-});
-
-export const removeCandy = (candy) => ({
-    type: "REMOVE_CANDY",
-    payload: candy
-});
+export const moveToWatched = (id) => ({
+    type: "MOVE_TO_WATCHED",
+    payload: { id },
+  });

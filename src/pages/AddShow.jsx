@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react";
-import Inputfield from "../Components/Inputfield";
-import { useSelector } from "react-redux";
-import Header from "../Components/Header";
 import style from './AddShow.module.scss';
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addShow } from "../actions/showActions";
+import Inputfield from "../Components/Inputfield";
+import Header from "../Components/Header";
 import Button from "../Components/Button";
-import { NavLink, useNavigate } from "react-router-dom";
 
 function AddShow() {
-    const navigate = useNavigate();
-    const [shows, setShows] = useState([]);
-    const [showsFromStore, setShowsFromStore] = useState([]);
-
-    const state = useSelector((state) => {
-        return state;
-    });
-    
-    useEffect(() => {
-        setShows(state.shows);
-        setShowsFromStore(state.shows);
-    }, [state]);
+    const dispatch = useDispatch();
 
     const [titleInput, setTitleInput] = useState("");
     const [channelInput, setChannelInput] = useState("");
@@ -31,29 +20,37 @@ function AddShow() {
             channel: channelInput,
             seasons: seasonsInput,
             poster: posterInput,
+            score: ""
         }
-        setShows([newShowObj, ...shows]);
-        setTitleInput('');
-        setChannelInput('');
-        setSeasonsInput('');
-        setPosterInput('');
+        console.log(newShowObj);
+        dispatch(addShow(newShowObj));
+
     }
-
-    // console.log(shows);
-
+    
+    // const handleClick = () => {
+    //     setTitleInput("");
+    //     setChannelInput("");
+    //     setSeasonsInput("");
+    //     setPosterInput("");
+    //   };
+    
     return ( 
         <section className={style.addNewShow}>
             <Header title="Add a new show"/>
             <div className={style.roundImage}>
                 <img src="./imgs/tv.png"/>
             </div>
-            <section className={style.inputFields} >
-                <Inputfield label='Title' type='text' action={setTitleInput} value={titleInput}/>
-                <Inputfield label='Channel' type='text' action={setChannelInput} value={channelInput}/>
-                <Inputfield label='Seasons' type='number' action={setSeasonsInput} value={seasonsInput}/>
-                <Inputfield label='Poster' type='text' action={setPosterInput} value={posterInput}/>
-            </section>
-            <Button title='Add show' action={addNewShow}/>
+            <form className={style.inputFields}>
+                <Inputfield label='Title' type='text' onChange={(e) => setTitleInput(e.target.value)}/>
+                <Inputfield label='Channel' type='text' onChange={(e) => setChannelInput(e.target.value)}/>
+                <Inputfield label='Seasons' type='number' onChange={(e) => setSeasonsInput(e.target.value)}/>
+                <Inputfield label='Poster' type='text' onChange={(e) => setPosterInput(e.target.value)}/>
+                {/* <Inputfield label='Title' type='text' value={titleInput} onChange={(e) => setTitleInput(e.target.value)}/>
+                <Inputfield label='Channel' type='text' value={channelInput} onChange={(e) => setChannelInput(e.target.value)}/>
+                <Inputfield label='Seasons' type='number' value={seasonsInput} onChange={(e) => setSeasonsInput(e.target.value)}/>
+                <Inputfield label='Poster' type='text' value={posterInput} onChange={(e) => setPosterInput(e.target.value)}/> */}
+            </form>
+                <Button title='Add show' action={() => addNewShow()} />
         </section>
      );
 }

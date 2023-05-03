@@ -5,7 +5,7 @@ function ShowCard({show}) {
 
 
     return ( 
-        <NavLink to={"/showinfo/" + show.id + '/' + show.title}>
+        <NavLink to={"/showinfo/" + show.id}>
             <article className={style.showCard}>
                 <section className={style.showCard__poster}>
                     <img src={show.poster} height='180px' />   

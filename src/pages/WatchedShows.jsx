@@ -2,23 +2,24 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import style from './WatchedShows.module.scss';
 import Header from "../Components/Header";
-import ShowCard from "../Components/ShowCard";
+import WatchedCard from "../Components/WatchedCard";
 
 function WatchedShows() {
-    const [shows, setShows] = useState([]);
+    const [watched, setWatched] = useState();
     const state = useSelector((state) => state);
 
     useEffect(() => {
-        setShows(state.shows);
+        setWatched(state.watched);
     }, [state]);
 
     return (
-        <main>
+        <main className={style.watchedShows}>
             <Header title='Watched shows'/>
-            {/* {
-                shows && shows.map((show) =>
-                    <ShowCard key={show.id} show={show}/>)
-            } */}
+            <section className={style.watchedShows__shows}>
+            {
+                watched && watched.map((show) => <WatchedCard key={show.id} show={show}/>)
+            }
+            </section>
         </main>
     );
 }

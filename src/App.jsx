@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Splash />}/>
           <Route path='/start' element={<StartPage />}/>
-          <Route path='/showinfo/:id/:title' element={<ShowInfo />}/>
+          <Route path='/showinfo/:id' element={<ShowInfo />}/>
           <Route path='/addShow' element={<AddShow />} />
           <Route path='/watched' element={<WatchedShows />}/>
         </Routes>

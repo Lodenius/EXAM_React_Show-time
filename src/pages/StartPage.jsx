@@ -6,7 +6,6 @@ import Header from '../Components/Header';
 
 function StartPage() {
     const [shows, setShows] = useState([]);
-    const [showsFromStore, setShowsFromStore] = useState([]);
 
     const state = useSelector((state) => {
         return state;
@@ -14,12 +13,11 @@ function StartPage() {
     
     useEffect(() => {
         setShows(state.shows);
-        setShowsFromStore(state.shows);
     }, [state]);
 
+    console.log(shows);
 
     return (
-
         <section className={style.startPage}>
             <Header title='My watchlist' />
                 <section className={style.startPage__shows}>
