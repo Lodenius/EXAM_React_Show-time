@@ -1,6 +1,9 @@
 import style from './WatchedCard.module.scss';
 
 function WatchedCard({show}) {
+
+    
+
     return (         
         <article className={style.watchedCard}>
             <section className={style.watchedCard__poster}>

@@ -15,9 +15,6 @@ function WatchedShows() {
     return (
         <main className={style.watchedShows}>
             <Header title='Watched shows'/>
-            <section className={style.watchedShows__empty}>
-                {watched.length === 0 && <p>You haven't finished a show yet!!? Hurry up, get back to the tv</p>}
-            </section>
             <section className={style.watchedShows__shows}>
             {
                 watched && watched.map((show) => <WatchedCard key={show.id} show={show}/>)

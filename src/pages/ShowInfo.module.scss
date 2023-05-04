@@ -29,9 +29,35 @@
         font-weight: bold;
     }
     &__progress {
-        margin-top: 1.5rem;
+        margin: 1.5rem;
         height: 5rem;
+        display: flex;
+        flex-direction: column;
+        &__episodes {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: auto;
+            p {
+                grid-column: 2;
+            }
+            button {
+                grid-column: 3;
+                width: 1.6rem;
+                background-color: black;
+                border: 1px solid rgba(128, 128, 128, 0.245);
+                border-radius: 5px;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    border: 1px solid $primaryRed;
+                }
+            }
+        }
     }
+
     &__progressButtons {
         width: 100%;
         display: flex;

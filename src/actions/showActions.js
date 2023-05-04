@@ -8,6 +8,11 @@ export const addShow = (added) => ({
     payload: { show: added}
 });
 
+export const addEpisode = (id, episode) => ({
+      type: "ADD_EPISODE",
+      payload: { id, episode }
+});
+
 export const finishedShow = (finished) => ({
     type: "FINISHED_SHOW",
     payload: { watched: finished }
@@ -16,14 +21,9 @@ export const finishedShow = (finished) => ({
 export const moveToWatched = (id) => ({
     type: "MOVE_TO_WATCHED",
     payload: { id },
-  });
+});
 
-  export const updateProgress = (progress) => ({
-    type: "UPDATE_PROGRESS",
-    payload: progress
-  })
-
-  export const setScore = (score) => ({
+export const setScore = (shows, newScore) => ({
     type: "SET_SCORE",
-    payload: score
-  })
+    payload: { shows, newScore }
+});

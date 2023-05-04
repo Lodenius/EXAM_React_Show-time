@@ -15,15 +15,11 @@ function StartPage() {
         setShows(state.shows);
     }, [state]);
 
-    console.log(shows);
-
     return (
         <section className={style.startPage}>
             <Header title='My watchlist' />
                 <section className={style.startPage__shows}>
-                {
-                    shows.map((show) => <ShowCard key={show.id} show={show}/>)
-                }
+                {shows.map((show) => <ShowCard key={show.id} show={show}/>)}
                 </section>
         </section>
 
