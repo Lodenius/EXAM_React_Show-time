@@ -7,7 +7,7 @@ function WatchedCard({show}) {
                 <img src={show.poster} height='180px' />   
             </section>
             <h2>{show.title}</h2>
-            <p>Score: {show.score + '/5'}</p>
+            <p>My score: {show.score + '/5'}</p>
         </article>
 )}
 

@@ -1,9 +1,16 @@
+@import "../variables";
+
 .watchedShows {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    &__empty {
+        width: 80%;
+        margin: 3rem auto;
+        @include infoFont
+    }
     &__shows {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

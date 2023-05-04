@@ -41,5 +41,6 @@
         background-color: black;
         font-size: 14px;
         padding: .3rem;
+        @include infoFont
     }
 }

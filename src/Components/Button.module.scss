@@ -1,14 +1,15 @@
 @import "../variables";
 
 .button {
-    background-color: $primaryRed;
-    color: white;
-    @include headlineFont;
-    font-size: medium;
-    border: none;
-    border-radius: 5px;
-    padding: 0.4rem;
     width: 9rem;
     height: 2rem;
+    padding: 0.4rem;
+    margin: 0 1rem;
+    color: white;
+    font-size: medium;
+    background-color: $primaryRed;
+    border: none;
+    border-radius: 5px;
+    @include headlineFont;
     cursor: pointer;
 }

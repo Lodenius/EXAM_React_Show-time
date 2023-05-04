@@ -4,10 +4,10 @@ import { NavLink, useParams } from "react-router-dom";
 import Header from '../Components/Header';
 import style from './ShowInfo.module.scss';
 import Button from "../Components/Button";
-import { finishedShow, moveToWatched } from "../actions/showActions";
+import { moveToWatched } from "../actions/showActions";
 
 
-function ShowInfo({finished}) {
+function ShowInfo() {
     const [shows, setShows] = useState([]);
     const params = useParams();
     const dispatch = useDispatch();
@@ -21,12 +21,9 @@ function ShowInfo({finished}) {
         setShows(showMatch);
     }, [state]);
 
-    // function addShowToWatched() {
-    //     console.log('I have finished', shows);
-    //     dispatch(moveToWatched(showId));
-    // }
 
-    const handleClick = () => {
+    const addShowToWatched = () => {
+        console.log('I have finished', shows);
         dispatch(moveToWatched(shows.id));
       };
 
@@ -53,7 +50,7 @@ function ShowInfo({finished}) {
                     </section>
                     <Button title="Update progress" action={updateProgress}/>
                     <NavLink to='/watched'>
-                        <Button title="Finished" action={handleClick}/>
+                        <Button title="Finished" action={addShowToWatched}/>
                     </NavLink>
                 </section>
                 }
