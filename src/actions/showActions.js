@@ -13,11 +13,6 @@ export const addEpisode = (id, episode) => ({
       payload: { id, episode }
 });
 
-// export const finishedShow = (finished) => ({
-//     type: "FINISHED_SHOW",
-//     payload: { watched: finished }
-// });
-
 export const moveToWatched = (id) => ({
     type: "MOVE_TO_WATCHED",
     payload: { id },

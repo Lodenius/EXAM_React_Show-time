@@ -35,12 +35,6 @@ let shows = [...state.shows]
             })
           };
 
-        // case "FINISHED_SHOW":
-        //   return {
-        //     ...state,
-        //     watched: [...state.watched, action.payload] 
-        //   };
-
         case "MOVE_TO_WATCHED": // flyttar show till watched
            const showToMove = state.shows.find((show) => show.id === action.payload.id);
            const updatedShows = state.shows.filter((show) => show.id !== action.payload.id);
@@ -63,10 +57,6 @@ let shows = [...state.shows]
               return show; // Returnera show-objektet oförändrat om id't inte matchar id't på objektet som ändrades
             })
           };
-
-        // case "MINUS_SCORE":
-        //   let removeScore = action.payload
-        //   let removedIndex = shows.findIndex((show => show.id === removeScore.id))
 
       default:
         return state;

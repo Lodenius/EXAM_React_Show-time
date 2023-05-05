@@ -4,7 +4,7 @@ import { NavLink, useParams } from "react-router-dom";
 import Header from '../Components/Header';
 import style from './ShowInfo.module.scss';
 import Button from "../Components/Button";
-import { addEpisode, moveToWatched } from "../actions/showActions";
+import { addEpisode } from "../actions/showActions";
 
 
 function ShowInfo() {
@@ -22,8 +22,6 @@ function ShowInfo() {
             setEpisodes(show.episodes);
         }
     }, [show]);
-
-
     
     return (
         <main>

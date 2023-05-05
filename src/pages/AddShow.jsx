@@ -24,7 +24,6 @@ function AddShow() {
             score: 0,
             episodes: 0
         }
-        console.log(newShowObj);
         dispatch(addShow(newShowObj));
     }
     
