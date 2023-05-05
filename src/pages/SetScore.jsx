@@ -33,20 +33,18 @@ function SetScore() {
             <Header title="Set score"/>
             {show && 
                 <section className={style.setScore}>
-                    {/* <img src={show.poster} height='280px'/>   
-                    <h2 className={style.setScore__title}>{show.title}</h2> */}
-
+                        <h2 className={style.setScore__question}>How many stars do you give</h2>
+                        <p className={style.setScore__title}>{show.title} ?</p> 
                     <section className={style.setScore__score}>
-                        <p>How many stars do you give <br></br>{show.title} ?</p> 
                             <section className={style.setScore__score__setter}>
-                                <button onClick={() => dispatch(changeScore(show.id, - 1))}>-</button>
+                                <button onClick={() => dispatch(changeScore(show.id, - 1))}>☆</button>
                                 <p>{show.score}</p>
-                                <button onClick={() => dispatch(changeScore(show.id, 1))}>+</button>
+                                <button onClick={() => dispatch(changeScore(show.id, 1))}>★</button>
                             </section>  
                     </section>
                     <section className={style.finishedButton}>
                         <NavLink to='/watched'>
-                            <Button title="Finished" action={addShowToWatched}/>
+                            <Button title="Set score" action={addShowToWatched}/>
                         </NavLink>
                     </section>
                 </section>
