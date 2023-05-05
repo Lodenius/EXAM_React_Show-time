@@ -8,6 +8,7 @@ import { watchList } from './actions/showActions'
 import ShowInfo from './pages/ShowInfo'
 import WatchedShows from './pages/WatchedShows'
 import AddShow from './pages/AddShow'
+import SetScore from './pages/setScore'
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
           <Route path='/start' element={<StartPage />}/>
           <Route path='/showinfo/:id' element={<ShowInfo />}/>
           <Route path='/addShow' element={<AddShow />} />
+          <Route path='/setscore/:id' element={<SetScore />}/>
           <Route path='/watched' element={<WatchedShows />}/>
         </Routes>
       </BrowserRouter>

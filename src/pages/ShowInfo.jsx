@@ -15,24 +15,22 @@ function ShowInfo() {
     state.shows.find((show) => show.id == params.id)
     );
     
+    const [episodes, setEpisodes] = useState(show ? show.episodes : 0);
+    
     useEffect(() => {
         if (show) {
             setEpisodes(show.episodes);
         }
     }, [show]);
 
-    const [episodes, setEpisodes] = useState(show ? show.episodes : 0);
 
-    const addShowToWatched = () => {
-        dispatch(moveToWatched(show.id));
-    };
     
     return (
         <main>
             <Header title="About the show"/>
             {show && 
                 <section className={style.showInfo}>
-                    <img src={show.poster} className={style.showInfo__poster} height='280px'/>   
+                    <img src={show.poster} height='280px'/>   
                     <h2 className={style.showInfo__title}>{show.title}</h2>
                     <section className={style.showInfo__info}>
                         <p>No. seasons: {show.seasons}</p>
@@ -45,8 +43,8 @@ function ShowInfo() {
                                 <button onClick={() => dispatch(addEpisode(show.id, 1))}>+</button>
                             </section>  
                     </section>
-                    <NavLink to='/watched'>
-                        <Button title="Finished" action={addShowToWatched}/>
+                    <NavLink to={"/setscore/" + show.id}>
+                        <Button title="Finished"/>
                     </NavLink>
                 </section>
                 }

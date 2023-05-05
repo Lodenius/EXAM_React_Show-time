@@ -23,12 +23,7 @@ export const moveToWatched = (id) => ({
     payload: { id },
 });
 
-// export const setScore = (id, newScore) => ({
-//     type: "SET_SCORE",
-//     payload: { id, newScore }
-// });
-
-export const setScore = (show, prop, newScore) => ({
-    type: "SET_SCORE",
-    payload: { show, prop, newScore }
+export const changeScore = (id, newScore) => ({
+    type: "CHANGE_SCORE",
+    payload: {id, newScore}
 });

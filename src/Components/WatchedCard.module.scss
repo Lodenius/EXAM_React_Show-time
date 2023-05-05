@@ -16,27 +16,24 @@
         border: 1px solid black;
     }
     h2 {
-        font-size: 17px;
-        margin-bottom: .5rem;
+        font-size: 18px;
+        margin-top: .5rem;
+        font-weight: bold;
     }
-    p {
-        color: white;
+    h3 {
         font-size: 15px;
         font-style: italic;
-        margin-bottom: .5rem;
-        @include infoFont
+        color: $primaryRed
     }
     .myScore {
+        @include infoFont;
+        font-size: 15px;
         display: flex;
         flex-direction: row;
         margin: auto;
-        button {
-            background-color: black;
-            border: none;
-            color: white;
-            font-size: 12px;
-            cursor: pointer;
-            margin: 0 1rem .7rem 1rem;
+        &__score {
+            margin-right: .2rem;
+            margin-left: .2rem;
         }
     }
 }

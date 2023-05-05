@@ -50,16 +50,23 @@ let shows = [...state.shows]
              watched: [...state.watched, showToMove],
         };
 
-        case "SET_SCORE":
-          let changedScore = action.payload.show;
-          let prop = action.payload.prop
-          changedScore[prop] = action.payload.newVScore
-          let indexOfScore = shows.findIndex((show) => show.id === changedScore.id);
-          shows.splice(indexOfScore, 1, changedScore);
+        case "CHANGE_SCORE":
           return {
-              ...state,
-              shows: shows
-          }
+            ...state,
+            shows: shows.map(show => {
+              if (show.id === action.payload.id) {
+                return {
+                  ...show, 
+                  score: Math.min(5, Math.max(0, show.score + action.payload.newScore))  // lägger till poäng och för så det inte kan bli minre än 0 eller högre än 5
+                };
+              }
+              return show; // Returnera show-objektet oförändrat om id't inte matchar id't på objektet som ändrades
+            })
+          };
+
+        // case "MINUS_SCORE":
+        //   let removeScore = action.payload
+        //   let removedIndex = shows.findIndex((show => show.id === removeScore.id))
 
       default:
         return state;
