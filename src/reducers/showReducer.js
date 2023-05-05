@@ -13,9 +13,9 @@ let shows = [...state.shows]
       case "ADD_SHOW":
         const highestId = Math.max(
           ...state.shows.map((show) => show.id), 
-          ...state.watched.map((finished) => finished.id)); // gör så det nya id's går efter det högsta id't i listan, så det inte ska bli kollition 
-        let id = highestId + 1; // lägg till id
-        shows.push({ id: id, ...action.payload.show }); // pusha in ny serie i listan
+          ...state.watched.map((finished) => finished.id));
+        let id = highestId + 1;
+        shows.push({ id: id, ...action.payload.show });
         return {
           ...state,
           shows: shows,
@@ -28,14 +28,14 @@ let shows = [...state.shows]
               if (show.id === action.payload.id) {
                 return {
                   ...show, 
-                  episodes: show.episodes + action.payload.episode // lägger till episodes
+                  episodes: show.episodes + action.payload.episode
                 };
               }
-              return show; // Returnera show-objektet oförändrat om id't inte matchar id't på objektet som ändrades
+              return show;
             })
           };
 
-        case "MOVE_TO_WATCHED": // flyttar show till watched
+        case "MOVE_TO_WATCHED":
            const showToMove = state.shows.find((show) => show.id === action.payload.id);
            const updatedShows = state.shows.filter((show) => show.id !== action.payload.id);
            return {
@@ -51,10 +51,10 @@ let shows = [...state.shows]
               if (show.id === action.payload.id) {
                 return {
                   ...show, 
-                  score: Math.min(5, Math.max(0, show.score + action.payload.newScore))  // lägger till poäng och för så det inte kan bli minre än 0 eller högre än 5
+                  score: Math.min(5, Math.max(0, show.score + action.payload.newScore))
                 };
               }
-              return show; // Returnera show-objektet oförändrat om id't inte matchar id't på objektet som ändrades
+              return show;
             })
           };
 
