@@ -15,8 +15,6 @@ function StartPage() {
         setShows(state.shows);
     }, [state]);
 
-    console.log(shows);
-
     return (
         <section className={style.startPage}>
             <Header title='My watchlist' />
