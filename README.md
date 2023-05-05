@@ -10,17 +10,14 @@
 
 ## Funktionalitet:
 
-- Du skall mappa ut objekt från en json
+- Mappa ut objekt från en json
 - Spara det i redux store
 - Kunna ta bort objekt från store
 - Lägga till nya objekt i store
 - Uppdatera objekt
 - Läsa av objekt
 
-
-Ni skall med hjälp av ovanstående tekniker skapa en applikation i React.js. Er applikation skall ha statehantering i Redux.
-
-I er redux skall ni kunna uppdatera er store, läsa från den, ta bort items och lägga till (CRUD).
+Med hjälp av ovanstående tekniker skapa en applikation i React.js som har statehantering i Redux.
 
 ### Mål:
 
