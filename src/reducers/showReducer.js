@@ -11,42 +11,55 @@ let shows = [...state.shows]
         };
 
       case "ADD_SHOW":
-        let id = state.shows.length + 1; // lägg till id
+        const highestId = Math.max(
+          ...state.shows.map((show) => show.id), 
+          ...state.watched.map((finished) => finished.id)); // gör så det nya id's går efter det högsta id't i listan, så det inte ska bli kollition 
+        let id = highestId + 1; // lägg till id
         shows.push({ id: id, ...action.payload.show }); // pusha in ny serie i listan
         return {
           ...state,
           shows: shows,
         };
 
-      case "FINISHED_SHOW":
-        return {
-          ...state,
-          watched: [...state.watched, action.payload],
+        case "ADD_EPISODE":
+          return {
+            ...state,
+            shows: shows.map(show => {
+              if (show.id === action.payload.id) {
+                return {
+                  ...show, 
+                  episodes: show.episodes + action.payload.episode // lägger till episodes
+                };
+              }
+              return show; // Returnera show-objektet oförändrat om id't inte matchar id't på objektet som ändrades
+            })
+          };
+
+        // case "FINISHED_SHOW":
+        //   return {
+        //     ...state,
+        //     watched: [...state.watched, action.payload] 
+        //   };
+
+        case "MOVE_TO_WATCHED": // flyttar show till watched
+           const showToMove = state.shows.find((show) => show.id === action.payload.id);
+           const updatedShows = state.shows.filter((show) => show.id !== action.payload.id);
+           return {
+             ...state,
+             shows: updatedShows,
+             watched: [...state.watched, showToMove],
         };
 
-      case "ADD_EPISODE":
-        return {
-          ...state,
-          shows: shows.map(show => {
-            if (show.id === action.payload.id) {
-              return {
-                ...show, episodes: show.episodes + action.payload.episode
-              };
-            }
-            return {
-              ...show, episodes: show.episodes + 1
-            };
-          })
-        };
-
-      case "MOVE_TO_WATCHED":
-        const showToMove = state.shows.find((show) => show.id === action.payload.id);
-        const updatedShows = state.shows.filter((show) => show.id !== action.payload.id);
-        return {
-          ...state,
-          shows: updatedShows,
-          watched: [...state.watched, showToMove],
-        };
+        case "SET_SCORE":
+          let changedScore = action.payload.show;
+          let prop = action.payload.prop
+          changedScore[prop] = action.payload.newVScore
+          let indexOfScore = shows.findIndex((show) => show.id === changedScore.id);
+          shows.splice(indexOfScore, 1, changedScore);
+          return {
+              ...state,
+              shows: shows
+          }
 
       default:
         return state;
