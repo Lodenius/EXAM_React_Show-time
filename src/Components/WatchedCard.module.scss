@@ -1,8 +1,8 @@
 @import "../variables";
 
 .watchedCard {
-    min-height: 17rem;
-    width: 10rem;
+    min-height: 18rem;
+    width: 11rem;
     color: black;
     margin: .5rem;
     display: flex;
@@ -16,12 +16,27 @@
         border: 1px solid black;
     }
     h2 {
-        font-size: 16px;
+        font-size: 17px;
+        margin-bottom: .5rem;
     }
     p {
         color: white;
-        font-size: 13px;
+        font-size: 15px;
         font-style: italic;
+        margin-bottom: .5rem;
         @include infoFont
+    }
+    .myScore {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        button {
+            background-color: black;
+            border: none;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            margin: 0 1rem .7rem 1rem;
+        }
     }
 }

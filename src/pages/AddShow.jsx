@@ -21,7 +21,7 @@ function AddShow() {
             channel: channelInput,
             seasons: seasonsInput,
             poster: posterInput || 'https://cdn3.vectorstock.com/i/1000x1000/92/27/party-and-show-poster-template-concert-vector-28149227.jpg',
-            score: "",
+            score: 0,
             episodes: 0
         }
         console.log(newShowObj);

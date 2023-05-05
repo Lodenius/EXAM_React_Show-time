@@ -24,7 +24,6 @@ function ShowInfo() {
     const [episodes, setEpisodes] = useState(show ? show.episodes : 0);
 
     const addShowToWatched = () => {
-        console.log('I have finished', show);
         dispatch(moveToWatched(show.id));
     };
     

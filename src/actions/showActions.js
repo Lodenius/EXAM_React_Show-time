@@ -13,17 +13,22 @@ export const addEpisode = (id, episode) => ({
       payload: { id, episode }
 });
 
-export const finishedShow = (finished) => ({
-    type: "FINISHED_SHOW",
-    payload: { watched: finished }
-});
+// export const finishedShow = (finished) => ({
+//     type: "FINISHED_SHOW",
+//     payload: { watched: finished }
+// });
 
 export const moveToWatched = (id) => ({
     type: "MOVE_TO_WATCHED",
     payload: { id },
 });
 
-export const setScore = (shows, newScore) => ({
+// export const setScore = (id, newScore) => ({
+//     type: "SET_SCORE",
+//     payload: { id, newScore }
+// });
+
+export const setScore = (show, prop, newScore) => ({
     type: "SET_SCORE",
-    payload: { shows, newScore }
+    payload: { show, prop, newScore }
 });
