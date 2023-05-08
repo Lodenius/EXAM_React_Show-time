@@ -8,7 +8,7 @@ import { watchList } from './actions/showActions'
 import ShowInfo from './pages/ShowInfo'
 import WatchedShows from './pages/WatchedShows'
 import AddShow from './pages/AddShow'
-import SetScore from './pages/setScore'
+import SetScore from './pages/SetScore'
 
 function App() {
   const dispatch = useDispatch();
